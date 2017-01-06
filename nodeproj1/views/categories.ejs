@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<h3><%= title %></h3>
+		<ul>
+			<% for(var i=0; i< categories.length;i++){ %>
+				<li><a href="/category/<%=categories[i].id%>"><%=categories[i].name%></a></li>
+			<% } %>
+		</ul>
+	</body>
+</html>

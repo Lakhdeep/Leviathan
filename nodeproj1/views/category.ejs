@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<%include templates/header.ejs%>
+		<p>Id: <%=maincategory.id%></p>
+		<p>Name: <%=maincategory.name%></p>
+		<p>Plural Name: <%=maincategory.pluralName%></p>
+		<p>Short Name: <%=maincategory.shortName%></p>
+		<p>Categories:</p>
+		<ul>
+			<% for(var i=0; i< maincategory.categories.length;i++){ %>
+				<li><a href="/subcategory/<%=maincategory.categories[i].id%>"><%=maincategory.categories[i].name%></a></li>
+			<% } %>
+		</ul>
+	</body>
+</html>
